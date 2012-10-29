@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<body>
+<div class="container">
+<div class="row">
+<span class="span6">
+	<textarea id="encode" rows="4" cols="100">
+encode
+</textarea>
+</span>
+<span class="span6">
+	<textarea id="decode" rows="4" cols="100">
+decode
+</textarea>
+</span>
+</div>
+<div class="row">
+<span class="span6">
+	<button type="button" onclick="encode()">encode</button>
+</span>
+<span class="span6">
+	<button type="button" onclick="decode()">decode</button>
+	</span>
+	</div>
+	<div id="txt"></div>
+	<script>
+		//var message = document.getElementById('encode').value
+		function encode() {
+			var message = document.getElementById('encode').value
+			var decode = "";
+
+			for ( var i = 0; i < message.length; i++) {
+				var char = message.substr(i, 1).toLowerCase();
+				switch (char) {
+				case 'a':
+					char = 's';
+					break;
+				case 'b':
+					char = 'n';
+					break;
+				case 'c':
+					char = 'v';
+					break;
+				case 'd':
+					char = 'f';
+					break;
+				case 'e':
+					char = 'r';
+					break;
+				case 'f':
+					char = 'g';
+					break;
+				case 'g':
+					char = 'h';
+					break;
+				case 'h':
+					char = 'j';
+					break;
+				case 'i':
+					char = 'o';
+					break;
+				case 'j':
+					char = 'k';
+					break;
+				case 'k':
+					char = 'l';
+					break;
+				case 'l':
+					char = ';';
+					break;
+				case 'm':
+					char = ',';
+					break;
+				case 'n':
+					char = 'm';
+					break;
+				case 'o':
+					char = 'p';
+					break;
+				case 'p':
+					char = '[';
+					break;	
+				case 'q':
+					char = 'w';
+					break;
+				case 'r':
+					char = 't';
+					break;
+				case 's':
+					char = 'd';
+					break;	
+				case 't':
+					char = 'y';
+					break;	
+				case 'u':
+					char = 'i';
+					break;	
+				case 'v':
+					char = 'b';	
+					break;	
+				case 'w':
+					char = 'e';
+					break;
+				case 'x':
+					char = 'c';
+					break;	
+				case 'y':
+					char = 'u';
+					break;		
+				case 'z':
+					char = 'x';
+					break;																	
+				default:
+					char = char;
+				}
+
+				decode += char;
+			}
+			;
+
+			document.getElementById('txt').innerHTML = decode;
+		}
+		
+		function decode() {
+			var message = document.getElementById('decode').value
+			var decode = "";
+
+			for ( var i = 0; i < message.length; i++) {
+				var char = message.substr(i, 1).toLowerCase();
+				switch (char) {
+				case 's':
+					char = 'a';
+					break;
+				case 'n':
+					char = 'b';
+					break;
+				case 'v':
+					char = 'c';
+					break;
+				case 'f':
+					char = 'd';
+					break;
+				case 'r':
+					char = 'e';
+					break;
+				case 'g':
+					char = 'f';
+					break;
+				case 'h':
+					char = 'g';
+					break;
+				case 'j':
+					char = 'h';
+					break;
+				case 'o':
+					char = 'i';
+					break;
+				case 'k':
+					char = 'j';
+					break;
+				case 'l':
+					char = 'k';
+					break;
+				case ';':
+					char = 'l';
+					break;
+				case ',':
+					char = 'm';
+					break;
+				case 'm':
+					char = 'n';
+					break;
+				case 'p':
+					char = 'o';
+					break;
+				case '[':
+					char = 'p';
+					break;	
+				case 'w':
+					char = 'q';
+					break;
+				case 't':
+					char = 'r';
+					break;
+				case 'd':
+					char = 's';
+					break;	
+				case 'y':
+					char = 't';
+					break;	
+				case 'i':
+					char = 'u';
+					break;	
+				case 'b':
+					char = 'v';	
+					break;	
+				case 'e':
+					char = 'w';
+					break;
+				case 'c':
+					char = 'x';
+					break;	
+				case 'u':
+					char = 'y';
+					break;		
+				case 'x':
+					char = 'z';
+					break;		
+				default:
+					char = char;
+				}
+
+				decode += char;
+			}
+			;
+
+			document.getElementById('txt').innerHTML = decode;
+		}
+	</script>
+
+</div>
+
+</body>
+</html>
